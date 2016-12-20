@@ -21,7 +21,7 @@ public class OrbitalTrucker extends ApplicationAdapter
         batch = new SpriteBatch();
         img = new Texture("title.png");
 
-        camera = new OrthographicCamera(240 * SCALE, 256 * SCALE);
+        camera = new OrthographicCamera(240, 256);
     }
 
     @Override
