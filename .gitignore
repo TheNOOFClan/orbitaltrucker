@@ -68,3 +68,11 @@ build/
 ## OS Specific
 .DS_Store
 Thumbs.db
+
+## Proprietary Assets
+*.png
+*.jpg
+*.img
+*.mp3
+*.ogg
+*.wav
