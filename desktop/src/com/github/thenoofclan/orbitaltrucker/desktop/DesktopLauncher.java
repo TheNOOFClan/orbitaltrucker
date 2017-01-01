@@ -11,8 +11,8 @@ public class DesktopLauncher
         LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
         config.title = "Orbital Trucker | Sol";
         config.foregroundFPS = 60;
-        config.height = 240;
-        config.width = 256;
+        config.height = 480;
+        config.width = 512;
         new LwjglApplication(new OrbitalTrucker(), config);
     }
 }
