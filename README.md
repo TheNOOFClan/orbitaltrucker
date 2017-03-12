@@ -10,3 +10,7 @@ Colors: 48 colors & 6 grays, as seen [here](http://www.thealmightyguru.com/Games
 Resolution: 256X240
 
 Sound: 5 channels, may use Konami VRC6, VRC7, etc.
+
+
+# Building
+This git repo only contains source code; to build, one must provide the resources listed in `core/assets/READ.ME`.
