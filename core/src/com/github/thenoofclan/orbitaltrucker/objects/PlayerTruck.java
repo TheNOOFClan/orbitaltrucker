@@ -15,12 +15,24 @@ public class PlayerTruck extends Ship
     int maxTurnTimeout = 30;
     int maxVel = 2;
 
+    /**
+     * Initializer for a PlayerTruck
+     * @param x Initial position in X axis (Passed to Super)
+     * @param y Initial position in Y axis (Passed to Super)
+     * @param dir Initial rotation (Passed to Super)
+     * @param straight Texture for 0 degrees (Passed to Super)
+     * @param angle Texture for 45 degrees (Passed to Super)
+     * @param camera Pass the camera, This is needed to reposition the camera
+     */
     public PlayerTruck(float x, float y, float dir, Texture straight, Texture angle, OrthographicCamera camera)
     {
         super(x, y, dir, straight, angle);
         this.camera = camera;
     }
 
+    /**
+     * Specific update method to properly update a PlayerTruck
+     */
     @Override
     public void update()
     {
