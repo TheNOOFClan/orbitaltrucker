@@ -6,6 +6,10 @@ import com.github.thenoofclan.orbitaltrucker.OrbitalTrucker;
 
 public class DesktopLauncher
 {
+    /**
+     * Main method for the game; creates the window, titles it, and sets FPS lock, height, and width
+     * @param arg
+     */
     public static void main(String[] arg)
     {
         LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
