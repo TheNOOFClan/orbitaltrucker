@@ -11,6 +11,9 @@ public class OrbitalTrucker extends Game
 
     public SpriteBatch batch;
 
+    /**
+     * Create method for the game
+     */
     @Override
     public void create()
     {
@@ -18,12 +21,18 @@ public class OrbitalTrucker extends Game
         this.setScreen(new MainMenuScreen(this));
     }
 
+    /**
+     * Calls the render method from Game
+     */
     @Override
     public void render()
     {
         super.render();
     }
 
+    /**
+     * Calls the dispose method from Game
+     */
     @Override
     public void dispose()
     {
