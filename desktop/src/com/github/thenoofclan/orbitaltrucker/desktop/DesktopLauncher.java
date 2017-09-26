@@ -8,7 +8,7 @@ public class DesktopLauncher
 {
     /**
      * Main method for the game; creates the window, titles it, and sets FPS lock, height, and width
-     * @param arg
+     * @param arg Pass a String array to main like every main method
      */
     public static void main(String[] arg)
     {
