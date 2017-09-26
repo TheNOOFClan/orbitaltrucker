@@ -17,6 +17,10 @@ public class MainMenuScreen implements Screen
     OrthographicCamera camera;
     Texture img;
 
+    /**
+     * Initailzer for a MainMenuScreen
+     * @param game Pass the game
+     */
     public MainMenuScreen(final OrbitalTrucker game)
     {
         this.game = game;
@@ -27,6 +31,9 @@ public class MainMenuScreen implements Screen
         img = new Texture(Gdx.files.internal("title.png"));
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void show()
     {
@@ -34,6 +41,10 @@ public class MainMenuScreen implements Screen
 
     }
 
+    /**
+     * Specific method for rendering a MainMenuScreen properly
+     * @param delta Not used for what ever reason... not even passed to anything
+     */
     @Override
     public void render(float delta)
     {
@@ -54,6 +65,11 @@ public class MainMenuScreen implements Screen
         }
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     * @param width
+     * @param height
+     */
     @Override
     public void resize(int width, int height)
     {
@@ -61,6 +77,9 @@ public class MainMenuScreen implements Screen
 
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void pause()
     {
@@ -68,6 +87,9 @@ public class MainMenuScreen implements Screen
 
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void resume()
     {
@@ -75,6 +97,9 @@ public class MainMenuScreen implements Screen
 
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void hide()
     {
@@ -82,6 +107,9 @@ public class MainMenuScreen implements Screen
 
     }
 
+    /**
+     *  Disposes the img Texture
+     */
     @Override
     public void dispose()
     {
