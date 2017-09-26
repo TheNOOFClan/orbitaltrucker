@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
+
 public class Ship
 {
     public float x;
@@ -19,6 +20,14 @@ public class Ship
     Sprite sprite0;
     Sprite sprite45;
 
+    /**
+     * Initializer method for a Ship type
+     * @param x Initial position in the X axis
+     * @param y Initial position in the Y axis
+     * @param dir Initial Rotation
+     * @param straight Texture for 0 degrees
+     * @param angle Texture for 45 degrees
+     */
     public Ship(float x, float y, float dir, Texture straight, Texture angle)
     {
         this.x = x;
@@ -39,6 +48,10 @@ public class Ship
         sprite45.setRotation(dir - 45);
     }
 
+    /**
+     * Specific render method to properly render a Ship
+     * @param batch Sprites used for the Ship
+     */
     public void render(SpriteBatch batch)
     {
         Sprite toDraw = sprite45;
@@ -47,6 +60,9 @@ public class Ship
         toDraw.draw(batch);
     }
 
+    /**
+     * Specific update method to properly update a Ship
+     */
     public void update()
     {
         x += vel.x;
