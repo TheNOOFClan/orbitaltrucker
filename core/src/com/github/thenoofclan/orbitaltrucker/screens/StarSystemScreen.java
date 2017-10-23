@@ -25,6 +25,10 @@ public class StarSystemScreen implements Screen
 
     PlayerTruck player;
 
+    /**
+     * Initializer for a StarSystemScreen
+     * @param game Pass the game
+     */
     public StarSystemScreen(final OrbitalTrucker game)
     {
         this.game = game;
@@ -41,6 +45,9 @@ public class StarSystemScreen implements Screen
         isPaused = false;
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void show()
     {
@@ -48,6 +55,10 @@ public class StarSystemScreen implements Screen
 
     }
 
+    /**
+     * Specific render method to render a StarSystemScreen properly
+     * @param delta Doesn't seem to be used
+     */
     @Override
     public void render(float delta)
     {
@@ -71,6 +82,11 @@ public class StarSystemScreen implements Screen
         game.batch.end();
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     * @param width
+     * @param height
+     */
     @Override
     public void resize(int width, int height)
     {
@@ -78,6 +94,9 @@ public class StarSystemScreen implements Screen
 
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void pause()
     {
@@ -85,6 +104,9 @@ public class StarSystemScreen implements Screen
 
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void resume()
     {
@@ -92,6 +114,9 @@ public class StarSystemScreen implements Screen
 
     }
 
+    /**
+     * Yay! Auto-generated method stubs!
+     */
     @Override
     public void hide()
     {
@@ -99,6 +124,9 @@ public class StarSystemScreen implements Screen
 
     }
 
+    /**
+     * Disposes truck0 and truck45 Textures
+     */
     @Override
     public void dispose()
     {

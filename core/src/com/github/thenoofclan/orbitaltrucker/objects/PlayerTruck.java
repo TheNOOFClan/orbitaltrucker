@@ -6,21 +6,40 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 
+/**
+ * The ship for the player
+ */
 public class PlayerTruck extends Ship
 {
 
+    /** The game's camera */
     OrthographicCamera camera;
 
+    /**  */
     int turnTimeout = 0;
+    /**  */
     int maxTurnTimeout = 30;
+    /** Maximum velocity */
     int maxVel = 2;
 
+    /**
+     * Initializer for a PlayerTruck
+     * @param x Initial position in X axis (Passed to Super)
+     * @param y Initial position in Y axis (Passed to Super)
+     * @param dir Initial rotation (Passed to Super)
+     * @param straight Texture for 0 degrees (Passed to Super)
+     * @param angle Texture for 45 degrees (Passed to Super)
+     * @param camera Pass the camera, This is needed to reposition the camera
+     */
     public PlayerTruck(float x, float y, float dir, Texture straight, Texture angle, OrthographicCamera camera)
     {
         super(x, y, dir, straight, angle);
         this.camera = camera;
     }
 
+    /**
+     * Specific update method to properly update a PlayerTruck
+     */
     @Override
     public void update()
     {
