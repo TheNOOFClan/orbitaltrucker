@@ -6,13 +6,20 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 
+/**
+ * The ship for the player
+ */
 public class PlayerTruck extends Ship
 {
 
+    /** The game's camera */
     OrthographicCamera camera;
 
+    /**  */
     int turnTimeout = 0;
+    /**  */
     int maxTurnTimeout = 30;
+    /** Maximum velocity */
     int maxVel = 2;
 
     /**

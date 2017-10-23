@@ -5,19 +5,27 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
-
+/** Generic Ship class */
 public class Ship
 {
+    /** Position in X axis */
     public float x;
+    /** Position in Y axis */
     public float y;
+    /** Rotation in multiples of 45 degrees */
     public float dir;
 
+    /** Velocity vector */
     public Vector2 vel;
 
+    /** Texture for 0 degrees */
     public Texture straightImg;
+    /** Texture for 45 degrees */
     public Texture angleImg;
 
+    /** Sprite for 0 degrees */
     Sprite sprite0;
+    /** Sprite for 45 degrees */
     Sprite sprite45;
 
     /**
