@@ -69,8 +69,8 @@ public class JsonReader
 				} else if ((nextChar >= '0' && nextChar <= '9') || nextChar == '-') // beginning of number
 				{
 					Number[] numbers = parseDouble(nextChar);
-					nextObj = new JsonNumber(current, (double) numbers[0]);
-					nextChar = (int) numbers[1];
+					nextObj = new JsonNumber(current, Double.parseDouble(numbers[0].toString()));
+					nextChar = Integer.parseInt(numbers[1].toString());
 				} else if (nextChar == 't' || nextChar == 'f' || nextChar == 'n') // beginning of boolean
 				{
 					Boolean data = parseBoolean(nextChar);
