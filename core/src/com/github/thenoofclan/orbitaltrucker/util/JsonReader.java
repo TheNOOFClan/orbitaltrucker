@@ -182,6 +182,12 @@ public class JsonReader
 					"Conversion error: the object you are trying to convert is not a number (int)");
 		}
 		
+		public float toFloat()
+		{
+			throw new UnsupportedOperationException(
+					"Conversion error: the object you are trying to convert is not a number (float)");
+		}
+		
 		public Boolean toBool()
 		{
 			throw new UnsupportedOperationException(
@@ -221,6 +227,12 @@ public class JsonReader
 		public int toInt()
 		{
 			return (int) data;
+		}
+		
+		@Override
+		public float toFloat()
+		{
+			return (float) data;
 		}
 	}
 	

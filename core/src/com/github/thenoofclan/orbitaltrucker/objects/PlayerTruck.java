@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
+import com.github.thenoofclan.orbitaltrucker.util.JsonReader.JsonObject;
 
 public class PlayerTruck extends Ship
 {
@@ -18,6 +19,12 @@ public class PlayerTruck extends Ship
 	public PlayerTruck(float x, float y, float dir, Texture straight, Texture angle, OrthographicCamera camera)
 	{
 		super(x, y, dir, straight, angle);
+		this.camera = camera;
+	}
+	
+	public PlayerTruck(JsonObject definition, OrthographicCamera camera)
+	{
+		super(definition);
 		this.camera = camera;
 	}
 	

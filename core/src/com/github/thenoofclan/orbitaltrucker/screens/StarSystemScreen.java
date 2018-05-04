@@ -8,7 +8,6 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.github.thenoofclan.orbitaltrucker.OrbitalTrucker;
 import com.github.thenoofclan.orbitaltrucker.objects.PlayerTruck;
 import com.github.thenoofclan.orbitaltrucker.objects.Ship;
@@ -27,7 +26,6 @@ public class StarSystemScreen implements Screen
 	
 	private SpaceObject[] obj;
 	private ArrayList<Ship> ships;
-	private ArrayList<Texture> textures;
 	
 	public StarSystemScreen(final OrbitalTrucker game, JsonObject universe)
 	{
@@ -56,37 +54,22 @@ public class StarSystemScreen implements Screen
 			JsonObject[] sShips = contents.get("ships").toArray(); // array of ships
 			obj = new SpaceObject[bodies.length];
 			ships = new ArrayList<Ship>();
-			textures = new ArrayList<Texture>();
 			for (int i = 0; i < bodies.length; i++)
 			{
-				Map<String, JsonObject> body = bodies[i].toMap();
-				String name = body.get("name").toString();
-				int x = body.get("x").toInt();
-				int y = body.get("y").toInt();
-				String textureName = body.get("texture").toString();
-				Texture texture = new Texture(Gdx.files.internal(textureName));
-				obj[i] = new SpaceObject(name, x, y, texture);
-				textures.add(texture);
+				obj[i] = new SpaceObject(bodies[i]);
 			}
 			for (JsonObject s : sShips)
 			{
 				Map<String, JsonObject> ship = s.toMap();
 				String faction = ship.get("faction").toString();
-				String textureName = ship.get("texture").toString();
-				String texture45name = ship.get("texture45").toString();
-				Texture texture = new Texture(Gdx.files.internal(textureName));
-				Texture texture45 = new Texture(Gdx.files.internal(texture45name));
-				int x = ship.get("x").toInt();
-				int y = ship.get("y").toInt();
-				int dir = ship.get("dir").toInt();
 				Ship current;
 				if (faction.equals("player"))
 				{
-					player = new PlayerTruck(x, y, dir, texture, texture45, camera);
+					player = new PlayerTruck(s, camera);
 					current = player;
 				} else
 				{
-					current = new Ship(x, y, dir, texture, texture45);
+					current = new Ship(s);
 				}
 				ships.add(current);
 			}
@@ -168,10 +151,11 @@ public class StarSystemScreen implements Screen
 	@Override
 	public void dispose()
 	{
-		for (Texture t : textures)
-		{
-			t.dispose();
-		}
+		for (Ship s : ships)
+			s.dispose();
+		
+		for (SpaceObject o : obj)
+			o.dispose();
 	}
 	
 }

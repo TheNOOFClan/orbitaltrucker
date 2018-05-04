@@ -27,6 +27,13 @@
 					"x":-256,
 					"y":128,
 					"texture":"planet2.png"
+				},
+				{
+					"type":"station",
+					"name":"Sevastopol",
+					"x":300,
+					"y":-128,
+					"texture":"station.png"
 				}
 			],
 			"ships":
@@ -34,9 +41,9 @@
 				{
 					"type":"truck",
 					"faction":"player",
-					"x":256,
+					"x":280,
 					"y":-128,
-					"dir":2,
+					"dir":4,
 					"texture":"truck0.png",
 					"texture45":"truck45.png"
 				}
