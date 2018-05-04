@@ -338,7 +338,15 @@ public class JsonReader
 		@Override
 		public JsonObject[] toArray()
 		{
-			return (JsonObject[]) data.toArray();
+			int len = data.size();
+			JsonObject[] ans = new JsonObject[len];
+			int i = 0;
+			for (JsonObject j : data)
+			{
+				ans[i] = j;
+				i++;
+			}
+			return ans;
 		}
 	}
 	

@@ -20,6 +20,13 @@
 					"x":256,
 					"y":-128,
 					"texture":"planet.png"
+				},
+				{
+					"type":"planet",
+					"name":"!Earth",
+					"x":-256,
+					"y":128,
+					"texture":"planet2.png"
 				}
 			],
 			"ships":
@@ -28,7 +35,7 @@
 					"type":"truck",
 					"faction":"player",
 					"x":256,
-					"y":128,
+					"y":-128,
 					"dir":2,
 					"texture":"truck0.png",
 					"texture45":"truck45.png"

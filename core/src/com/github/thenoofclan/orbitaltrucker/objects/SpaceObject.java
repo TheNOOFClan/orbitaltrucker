@@ -8,14 +8,20 @@ public class SpaceObject
 {
 	float x;
 	float y;
+	private int widthOffset;
+	private int heightOffset;
+	
 	Texture texture;
 	
 	private Sprite sprite;
 	
 	public SpaceObject(String name, float x, float y, Texture texture)
 	{
+		this.widthOffset = texture.getWidth() / 2;
+		this.heightOffset = texture.getHeight() / 2;
+		
 		sprite = new Sprite(texture);
-		sprite.setPosition(x, y);
+		sprite.setPosition((int) x - widthOffset, (int) y - heightOffset);
 	}
 	
 	public void update()
